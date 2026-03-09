@@ -1,237 +1,590 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png" onerror="this.src='https://api.iconify.design/logos:tiktok-icon.svg'">
+    <title>RVTik Stream Overlay</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="favicon.ico">
-<title>RVTik Stream Overlay</title>
+    <style>
+        /* CSS Variables untuk Tema TikTok & Glassmorphism */
+        :root {
+            --bg-color: #050507;
+            --tk-cyan: #00f2fe;
+            --tk-pink: #fe0979;
+            --glass-bg: rgba(20, 20, 25, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-main: #ffffff;
+            --text-muted: #9ca3af;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
 
-<style>
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            position: relative;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
+        /* Background Effects - Glowing Orbs */
+        .bg-glow {
+            position: fixed;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            opacity: 0.15;
+            animation: float 10s infinite ease-in-out alternate;
+        }
+        .glow-cyan {
+            background: var(--tk-cyan);
+            top: -10%;
+            left: -10%;
+        }
+        .glow-pink {
+            background: var(--tk-pink);
+            bottom: -10%;
+            right: -10%;
+            animation-delay: -5s;
+        }
 
-body{
-background:#07080c;
-color:white;
-}
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(30px, 50px) scale(1.1); }
+        }
 
-.container{
-max-width:1200px;
-margin:auto;
-padding:40px 20px;
-}
+        /* Glassmorphism Utility */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
 
-header{
-display:flex;
-align-items:center;
-gap:12px;
-margin-bottom:60px;
-}
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 10;
+        }
 
-header img{
-width:38px;
-}
+        /* Header Navigation */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 15px 30px;
+            border-radius: 100px;
+            width: fit-content;
+            margin: 0 auto 60px auto;
+            transition: 0.3s;
+        }
+        header:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
+        }
+        header img {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        header span {
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.5px;
+        }
 
-header span{
-font-size:20px;
-font-weight:600;
-}
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 80px;
+            padding: 0 20px;
+        }
 
-.hero{
-text-align:center;
-margin-bottom:80px;
-}
+        .hero h1 {
+            font-size: 56px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 30%, var(--tk-cyan) 80%, var(--tk-pink));
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 10px 30px rgba(0, 242, 254, 0.2);
+        }
 
-.hero h1{
-font-size:48px;
-letter-spacing:2px;
-background:linear-gradient(90deg,#9aa8ff,#ffffff);
--webkit-background-clip:text;
-color:transparent;
-}
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 10px auto;
+            line-height: 1.6;
+        }
 
-.hero p{
-margin-top:20px;
-font-size:18px;
-color:#9ca3af;
-}
+        /* Download Button */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 40px;
+            padding: 16px 40px;
+            background: linear-gradient(90deg, var(--tk-cyan), #0072ff);
+            border-radius: 100px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
 
-.download-btn{
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
 
-margin-top:40px;
-display:inline-flex;
-align-items:center;
-gap:10px;
+        .download-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 242, 254, 0.5);
+        }
 
-padding:15px 34px;
+        .download-btn:hover::before {
+            left: 100%;
+        }
 
-background:linear-gradient(90deg,#5b7cff,#8a4dff);
+        .windows-icon {
+            width: 22px;
+            height: 22px;
+        }
 
-border-radius:12px;
+        /* Preview Image Section */
+        .preview {
+            margin-top: 60px;
+            text-align: center;
+            position: relative;
+        }
 
-text-decoration:none;
-color:white;
-font-weight:600;
+        .preview::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%; height: 80%;
+            background: linear-gradient(45deg, var(--tk-pink), var(--tk-cyan));
+            filter: blur(80px);
+            opacity: 0.2;
+            z-index: -1;
+        }
 
-transition:0.25s;
-}
+        .preview img {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 25px 80px rgba(0,0,0,0.8);
+            transition: transform 0.5s;
+        }
+        
+        .preview img:hover {
+            transform: scale(1.01) translateY(-5px);
+        }
 
-.download-btn:hover{
+        /* Features Grid */
+        .features {
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
 
-transform:translateY(-2px);
+        .card {
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
 
-box-shadow:0 10px 40px rgba(120,120,255,0.4);
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px; height: 100%;
+            background: linear-gradient(to bottom, var(--tk-cyan), var(--tk-pink));
+            opacity: 0;
+            transition: 0.3s;
+        }
 
-}
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(30, 30, 40, 0.6);
+        }
 
-.windows-icon{
+        .card:hover::before {
+            opacity: 1;
+        }
 
-width:20px;
-height:20px;
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 20px;
+            color: var(--tk-cyan);
+            background: rgba(0, 242, 254, 0.1);
+            padding: 8px;
+            border-radius: 10px;
+        }
 
-}
+        .card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #fff;
+        }
 
-.preview{
-margin-top:60px;
-text-align:center;
-}
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 15px;
+        }
 
-.preview img{
-width:100%;
-max-width:1000px;
-border-radius:14px;
-border:1px solid #1c1f29;
-box-shadow:0 20px 80px rgba(0,0,0,0.6);
-}
+        /* Footer */
+        .footer {
+            margin-top: 100px;
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            font-size: 14px;
+        }
 
-.features{
-margin-top:80px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:30px;
-}
+        .footer b {
+            color: #fff;
+            font-weight: 600;
+        }
 
-.card{
-background:#0f1117;
-padding:25px;
-border-radius:14px;
-border:1px solid #1b1e27;
-}
+        /* =========================================
+           ANIMASI LIVE CHAT & GIFT OVERLAY (KIRI BAWAH)
+           ========================================= */
+        .chat-overlay-container {
+            position: fixed;
+            bottom: 40px;
+            left: 30px;
+            width: 320px;
+            height: 400px;
+            pointer-events: none; /* Agar tidak mengganggu klik */
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 10px;
+            mask-image: linear-gradient(to top, black 60%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to top, black 60%, transparent 100%);
+        }
 
-.card h3{
-margin-bottom:10px;
-}
+        .chat-msg {
+            background: rgba(15, 15, 20, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 10px 14px;
+            border-radius: 12px;
+            font-size: 14px;
+            color: #fff;
+            animation: slideInUp 0.4s ease-out forwards, fadeOut 0.5s ease-in 4.5s forwards;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            will-change: transform, opacity;
+        }
 
-.card p{
-color:#9ca3af;
-}
+        .chat-msg.gift {
+            background: linear-gradient(135deg, rgba(254, 9, 121, 0.2), rgba(0, 242, 254, 0.2));
+            border-color: rgba(254, 9, 121, 0.4);
+            box-shadow: 0 4px 15px rgba(254, 9, 121, 0.2);
+        }
 
-.footer{
-margin-top:100px;
-text-align:center;
-color:#777;
-font-size:14px;
-}
+        .chat-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--tk-cyan);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            color: #000;
+        }
 
-</style>
+        .chat-content {
+            display: flex;
+            flex-direction: column;
+        }
 
+        .chat-user {
+            font-weight: 600;
+            color: var(--tk-cyan);
+            font-size: 13px;
+        }
+        
+        .chat-msg.gift .chat-user {
+            color: var(--tk-pink);
+        }
+
+        .chat-text {
+            color: #e5e7eb;
+            margin-top: 2px;
+            word-break: break-word;
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; transform: scale(1); }
+            to { opacity: 0; transform: scale(0.9); height: 0; padding: 0; margin: 0; border: 0;}
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            header {
+                padding: 10px 20px;
+                margin-bottom: 40px;
+            }
+            header span {
+                font-size: 16px;
+            }
+            .hero {
+                margin-bottom: 50px;
+            }
+            .hero h1 { 
+                font-size: 34px; 
+            }
+            .hero p {
+                font-size: 15px;
+                padding: 0 10px;
+            }
+            .download-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 20px;
+                font-size: 15px;
+            }
+            .preview {
+                margin-top: 40px;
+            }
+            .features {
+                margin-top: 60px;
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .card {
+                padding: 20px;
+            }
+            .chat-overlay-container {
+                left: 10px;
+                bottom: 10px;
+                width: 250px;
+                height: 300px;
+                mask-image: linear-gradient(to top, black 50%, transparent 100%);
+                -webkit-mask-image: linear-gradient(to top, black 50%, transparent 100%);
+            }
+            .chat-msg {
+                font-size: 12px;
+                padding: 8px 12px;
+            }
+            .chat-avatar {
+                width: 24px;
+                height: 24px;
+                font-size: 10px;
+            }
+            .chat-user {
+                font-size: 11px;
+            }
+            .footer {
+                margin-top: 60px;
+                padding: 20px 0;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <!-- Ambient Glowing Backgrounds -->
+    <div class="bg-glow glow-cyan"></div>
+    <div class="bg-glow glow-pink"></div>
 
-<header>
+    <!-- Live Stream Chat Overlay Simulation -->
+    <div class="chat-overlay-container" id="chat-simulator"></div>
 
-<img src="icon.png">
-<span>RVTik Overlay</span>
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="glass">
+            <!-- Gunakan fallback image iconify jika icon.png tidak ada -->
+            <img src="icon.png" onerror="this.src='https://api.iconify.design/logos:tiktok-icon.svg'" alt="RVTik Logo">
+            <span>RVTik Overlay</span>
+        </header>
 
-</header>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>RVTik Stream Overlay</h1>
+            <p>Tingkatkan kualitas Live TikTok kamu dengan overlay profesional. Komentar, Gift, dan Penonton tampil secara Real-Time.</p>
+            <p>UI cerdas & elegan — cukup masukkan username TikTok dan overlay siap digunakan.</p>
 
-<section class="hero">
+            <a class="download-btn" href="https://drive.google.com/uc?export=download&id=1SjLO4vyTQVXlhNgIopl9mFuwuu0l0V3W" target="_blank">
+                <svg class="windows-icon" viewBox="0 0 24 24" fill="white">
+                    <path d="M3 5.5l7-1v8H3v-7zm8-1.2l10-1.3v9.5H11V4.3zM3 13.5h7v8l-7-1v-7zm8 0h10v9.7l-10-1.4v-8.3z"/>
+                </svg>
+                Download for Windows
+            </a>
+        </section>
 
-<h1>RVTik Stream Overlay</h1>
+        <!-- Image Preview -->
+        <section class="preview">
+            <!-- Fallback image (Placehold) jika dashboard.png tidak ditemukan -->
+            <img src="dashboard.png" onerror="this.src='https://placehold.co/1000x562/0f0f15/00f2fe?text=RVTik+Dashboard+Preview&font=Inter'" alt="Dashboard Preview">
+        </section>
 
-<p>
-Real-Time TikTok Live Overlay for Streamers
-</p>
+        <!-- Features -->
+        <section class="features">
+            <div class="card glass">
+                <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <h3>Simple Setup</h3>
+                <p>Tanpa ribet! Masukkan username TikTok kamu dan overlay otomatis terkoneksi dan aktif dalam hitungan detik.</p>
+            </div>
 
-<p>
-UI sederhana — cukup masukkan username TikTok dan overlay siap digunakan untuk streaming.
-</p>
+            <div class="card glass">
+                <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                <h3>Real-Time Chat</h3>
+                <p>Tampilkan komentar interaktif dari penonton langsung ke layar OBS/Streaming kamu tanpa delay.</p>
+            </div>
 
-<a class="download-btn" href="https://drive.google.com/uc?export=download&id=1SjLO4vyTQVXlhNgIopl9mFuwuu0l0V3W">
+            <div class="card glass">
+                <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                <h3>Viewer Counter</h3>
+                <p>Pantau jumlah penonton yang sedang menonton Live kamu secara live dan akurat di layar.</p>
+            </div>
 
-<svg class="windows-icon" viewBox="0 0 24 24" fill="white">
-<path d="M3 5.5l7-1v8H3v-7zm8-1.2l10-1.3v9.5H11V4.3zM3 13.5h7v8l-7-1v-7zm8 0h10v9.7l-10-1.4v-8.3z"/>
-</svg>
+            <div class="card glass">
+                <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path></svg>
+                <h3>Gift Alerts</h3>
+                <p>Animasi notifikasi spektakuler saat penonton mengirimkan gift. Apresiasi penontonmu dengan lebih baik!</p>
+            </div>
 
-Download for Windows
+            <div class="card glass">
+                <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+                <h3>Join Notifications</h3>
+                <p>Notifikasi elegan saat ada penonton, sultan, atau top gifter baru yang bergabung ke dalam Live.</p>
+            </div>
 
-</a>
+            <div class="card glass">
+                <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                <h3>Control Dock</h3>
+                <p>Panel monitoring khusus untuk melihat seluruh riwayat event dan mengatur layout dengan leluasa.</p>
+            </div>
+        </section>
 
-</section>
+        <!-- Footer -->
+        <div class="footer">
+            <p>Developed by <b>Amik Ruang Visual</b></p>
+            <p style="margin-top: 5px;">TikTok & Instagram <a href="tiktok.com/@dailylife.emix" style="color:var(--tk-cyan); text-decoration:none;">@dailylife.emix</a></p>
+        </div>
 
-<section class="preview">
+    </div>
 
-<img src="dashboard.png">
+    <!-- JavaScript untuk Animasi Chat (Simulasi) -->
+    <script>
+        const chatContainer = document.getElementById('chat-simulator');
+        
+        // Inisialisasi Audio Notifikasi
+        const notifySound = new Audio('notify.mp3');
+        notifySound.volume = 0.5; // Atur volume (0.5 = 50%)
+        
+        // Data dummy untuk simulasi chat
+        const chatMocks = [
+            { user: "rudi_gaming", text: "Wah keren banget overlaynya bang! 🔥" },
+            { user: "caca.marica", text: "Hadir bang amikkk 👋" },
+            { user: "pro_player99", text: "Tutor pasang di OBS dong" },
+            { user: "bocil_kematian", text: "Spill PC nya ngab", gift: null },
+            { user: "sultan_andalas", text: "Mantappp lanjut terus", gift: "🌹 Mawar" },
+            { user: "anime_lovers", text: "UI nya mulus parah 😍" },
+            { user: "kang_tutor", text: "Izin sedot bang filenya" },
+            { user: "siska_imut", text: "Semangat live nya!", gift: "🍩 Donat" }
+        ];
 
-</section>
+        function createChatBubble() {
+            const data = chatMocks[Math.floor(Math.random() * chatMocks.length)];
+            const isGift = data.gift !== undefined && data.gift !== null;
+            
+            const chatEl = document.createElement('div');
+            chatEl.className = `chat-msg ${isGift ? 'gift' : ''}`;
+            
+            // Inisial avatar
+            const initial = data.user.charAt(0).toUpperCase();
 
-<section class="features">
+            chatEl.innerHTML = `
+                <div class="chat-avatar">${initial}</div>
+                <div class="chat-content">
+                    <span class="chat-user">${data.user} ${isGift ? 'mengirim Gift!' : ''}</span>
+                    <span class="chat-text">${isGift ? `Mendapatkan <b>${data.gift}</b> 🎉` : data.text}</span>
+                </div>
+            `;
 
-<div class="card">
-<h3>Simple Setup</h3>
-<p>Masukkan username TikTok dan overlay langsung aktif.</p>
-</div>
+            chatContainer.appendChild(chatEl);
 
-<div class="card">
-<h3>Real-Time Chat</h3>
-<p>Komentar penonton muncul langsung di layar streaming.</p>
-</div>
+            // Putar efek suara saat pesan muncul
+            notifySound.currentTime = 0; // Reset ke awal agar bisa bunyi berulang/bertumpuk
+            notifySound.play().catch(err => {
+                // Error ini normal ditangkap jika user belum klik halaman sama sekali (Autoplay Policy browser)
+                console.log("Suara ditunda. Klik area mana saja di halaman web untuk mengaktifkan notifikasi suara.");
+            });
 
-<div class="card">
-<h3>Viewer Counter</h3>
-<p>Menampilkan jumlah penonton live secara real-time.</p>
-</div>
+            // Hapus elemen setelah animasi selesai agar DOM tidak penuh (4.5s delay + 0.5s fadeOut)
+            setTimeout(() => {
+                if(chatContainer.contains(chatEl)) {
+                    chatContainer.removeChild(chatEl);
+                }
+            }, 5000);
+            
+            // Jadwalkan chat berikutnya secara random (antara 1.5 detik - 3.5 detik)
+            const nextTime = Math.random() * 2000 + 1500;
+            setTimeout(createChatBubble, nextTime);
+        }
 
-<div class="card">
-<h3>Gift Alerts</h3>
-<p>Notifikasi gift dan event live muncul otomatis.</p>
-</div>
-
-<div class="card">
-<h3>Join Notifications</h3>
-<p>Menampilkan ketika penonton baru masuk ke live.</p>
-</div>
-
-<div class="card">
-<h3>Control Dock</h3>
-<p>Panel monitoring untuk melihat event live.</p>
-</div>
-
-</section>
-
-<div class="footer">
-
-<p>Developed by <b>Amik Ruang Visual</b></p>
-<p>TikTok & Instagram @dailylife.emix</p>
-
-</div>
-
-</div>
-
+        // Mulai simulasi chat setelah 1 detik
+        setTimeout(createChatBubble, 1000);
+    </script>
 </body>
-
 </html>
-
-
-
