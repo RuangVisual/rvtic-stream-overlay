@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RVTik Stream Overlay</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#07080c;
+color:white;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+header{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:60px;
+}
+
+header img{
+width:38px;
+}
+
+header span{
+font-size:20px;
+font-weight:600;
+}
+
+.hero{
+text-align:center;
+margin-bottom:80px;
+}
+
+.hero h1{
+font-size:48px;
+letter-spacing:2px;
+background:linear-gradient(90deg,#9aa8ff,#ffffff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+margin-top:20px;
+font-size:18px;
+color:#9ca3af;
+}
+
+.download-btn{
+
+margin-top:40px;
+display:inline-flex;
+align-items:center;
+gap:10px;
+
+padding:15px 34px;
+
+background:linear-gradient(90deg,#5b7cff,#8a4dff);
+
+border-radius:12px;
+
+text-decoration:none;
+color:white;
+font-weight:600;
+
+transition:0.25s;
+}
+
+.download-btn:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 10px 40px rgba(120,120,255,0.4);
+
+}
+
+.windows-icon{
+
+width:20px;
+height:20px;
+
+}
+
+.preview{
+margin-top:60px;
+text-align:center;
+}
+
+.preview img{
+width:100%;
+max-width:1000px;
+border-radius:14px;
+border:1px solid #1c1f29;
+box-shadow:0 20px 80px rgba(0,0,0,0.6);
+}
+
+.features{
+margin-top:80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+}
+
+.card{
+background:#0f1117;
+padding:25px;
+border-radius:14px;
+border:1px solid #1b1e27;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#9ca3af;
+}
+
+.footer{
+margin-top:100px;
+text-align:center;
+color:#777;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<img src="icon.png">
+<span>RVTik Overlay</span>
+
+</header>
+
+<section class="hero">
+
+<h1>RVTik Stream Overlay</h1>
+
+<p>
+Real-Time TikTok Live Overlay for Streamers
+</p>
+
+<p>
+UI sederhana — cukup masukkan username TikTok dan overlay siap digunakan untuk streaming.
+</p>
+
+<a class="download-btn" href="RVTikSetup.exe">
+
+<svg class="windows-icon" viewBox="0 0 24 24" fill="white">
+<path d="M3 5.5l7-1v8H3v-7zm8-1.2l10-1.3v9.5H11V4.3zM3 13.5h7v8l-7-1v-7zm8 0h10v9.7l-10-1.4v-8.3z"/>
+</svg>
+
+Download for Windows
+
+</a>
+
+</section>
+
+<section class="preview">
+
+<img src="dashboard.png">
+
+</section>
+
+<section class="features">
+
+<div class="card">
+<h3>Simple Setup</h3>
+<p>Masukkan username TikTok dan overlay langsung aktif.</p>
+</div>
+
+<div class="card">
+<h3>Real-Time Chat</h3>
+<p>Komentar penonton muncul langsung di layar streaming.</p>
+</div>
+
+<div class="card">
+<h3>Viewer Counter</h3>
+<p>Menampilkan jumlah penonton live secara real-time.</p>
+</div>
+
+<div class="card">
+<h3>Gift Alerts</h3>
+<p>Notifikasi gift dan event live muncul otomatis.</p>
+</div>
+
+<div class="card">
+<h3>Join Notifications</h3>
+<p>Menampilkan ketika penonton baru masuk ke live.</p>
+</div>
+
+<div class="card">
+<h3>Control Dock</h3>
+<p>Panel monitoring untuk melihat event live.</p>
+</div>
+
+</section>
+
+<div class="footer">
+
+<p>Developed by <b>Amik Ruang Visual</b></p>
+<p>TikTok & Instagram @dailylife.emix</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
