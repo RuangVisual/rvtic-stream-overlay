@@ -1,7 +1,12 @@
 🎥 RVTik Stream Overlay
-<p align="center"> Real-Time Overlay System for TikTok Live Streamers </p> <p align="center">
+<p align="center">
+Overlay Profesional untuk TikTok Live Streamer
 
+Tampilkan Chat, Gift, Viewer, dan Event TikTok Live secara Real-Time langsung di streaming kamu.
 
+UI minimalis • Setup super cepat • Ringan untuk streaming
+
+</p> <p align="center">
 
 
 
@@ -11,107 +16,156 @@
 
 
 </p>
-🚀 About RVTik
+🚀 Tentang RVTik
 
-RVTik Stream Overlay adalah aplikasi desktop yang membantu streamer TikTok Live menampilkan interaksi penonton secara real-time langsung di layar streaming.
+RVTik Stream Overlay adalah aplikasi desktop yang membantu streamer TikTok menampilkan interaksi penonton secara real-time langsung di layar streaming.
 
-Dengan RVTik, berbagai aktivitas penonton seperti:
+Dengan RVTik kamu bisa menampilkan berbagai event live seperti:
 
-💬 Chat
+💬 Chat dari penonton
 
-🎁 Gift
+🎁 Gift yang masuk
 
-👀 Viewers
+👀 Jumlah viewers
 
-🙋 Join
+🙋 Penonton yang join live
 
-dapat muncul otomatis sebagai overlay yang bisa digunakan pada software streaming seperti OBS.
-
-Aplikasi ini dirancang dengan fokus pada:
-
-⚡ Ringan
-
-🧩 Mudah digunakan
-
-🔴 Real-time
-
-🎥 Streamer friendly
+Semua event tersebut akan muncul sebagai overlay yang bisa digunakan di OBS, Streamlabs, atau software streaming lain yang mendukung Browser Source.
 
 ⬇️ Download
-Windows
-
+Windows Version
 https://drive.google.com/uc?export=download&id=17ev6LMVbQ749s1k_vDqoSPHSLXCEV5LY
+
+MacOS Version
+Coming Soon
 
 ✨ Features
 💬 Real-Time Chat Overlay
 
-Menampilkan komentar penonton langsung di layar streaming secara realtime.
+Menampilkan komentar penonton langsung ke layar streaming tanpa delay.
 
-👀 Live Viewers Counter
+👀 Viewer Counter
 
-Menampilkan jumlah penonton live secara realtime selama streaming berlangsung.
+Menampilkan jumlah penonton live secara real-time dan akurat.
 
 🎁 Gift Alerts
 
-Notifikasi otomatis ketika penonton mengirim gift saat live.
+Animasi notifikasi ketika penonton mengirim gift saat live.
 
-🙋 Join Notification
+🙋 Join Notifications
 
-Menampilkan notifikasi ketika penonton baru masuk ke live.
+Notifikasi elegan ketika ada penonton baru yang bergabung ke live.
 
+🖥 Control Dock
+
+Panel monitoring khusus untuk:
+
+melihat chat
+
+melihat gift
+
+memonitor event live
+
+langsung dari aplikasi.
+
+⚡ Simple Setup
+
+Setup RVTik hanya membutuhkan beberapa langkah:
+
+1 Install aplikasi
+
+Download dan jalankan aplikasi RVTik.
+
+Jika file masih dalam bentuk zip, extract terlebih dahulu.
+
+Jalankan:
+
+RVTik.exe
+
+Jika Windows Defender muncul:
+
+More Info → Run Anyway
+2 Hubungkan TikTok Live
+
+Isi data pada dashboard:
+
+Session
+
+RV_XXXXX
+
+Session digunakan untuk menghubungkan aplikasi dengan overlay.
+
+Username
+
+username_tiktok
+3 Start Connection
+
+Klik tombol:
+
+START
+
+Status akan berubah menjadi:
+
+Connected
+
+RVTik akan mulai membaca event live seperti:
+
+Chat
+
+Gift
+
+Join
+
+Follow
+
+4 Tambahkan Overlay ke OBS
+
+Di dashboard buka menu Overlay Links.
+
+Copy link overlay yang ingin digunakan.
+
+Di OBS:
+
+Sources
+Add
+Browser Source
+Paste Overlay Link
+
+Ukuran yang disarankan:
+
+1920 x 1080
 🖥 Dock Monitoring Panel
 
-Panel untuk monitor chat dan event live secara langsung dari aplikasi.
+Dock adalah panel untuk memonitor event live secara realtime.
 
-⚡ Lightweight
+Fungsi dock:
 
-Dibuat agar tetap ringan saat digunakan bersama OBS atau software streaming lainnya.
+melihat chat
 
-🖥 Supported Streaming Software
+melihat gift masuk
 
-RVTik dapat digunakan dengan berbagai software streaming yang mendukung Browser Source.
+melihat join event
 
-OBS Studio
+monitoring live activity
 
-Streamlabs
+Buka dock dengan tombol:
 
-TikTok Live Studio
+DOCK
+⚡ Tips Agar Aplikasi Lebih Ringan
 
-XSplit
+Untuk performa terbaik saat streaming:
 
-Software streaming lain yang mendukung Browser Source
-
-⚙️ Setup Guide
-1️⃣ Jalankan Aplikasi
-
-Buka RVTik Stream Overlay di komputer.
-
-2️⃣ Masukkan Username TikTok
-
-Masukkan username TikTok Live yang akan digunakan.
-
-3️⃣ Copy Overlay Link
-
-Aplikasi akan menyediakan overlay link otomatis.
-
-4️⃣ Tambahkan ke OBS
-OBS → Sources → Browser Source
-
-Paste overlay link ke Browser Source.
-
-5️⃣ Start Streaming 🎉
-
-Overlay akan muncul otomatis saat event terjadi di live.
-
-💡 Performance Tips
-
-Agar aplikasi lebih ringan saat streaming:
-
-Minimize Dashboard
+Minimize Dashboard RVTik
 
 Biarkan hanya Dock Panel yang aktif
 
-Jika ingin membuka dashboard kembali:
+Aplikasi akan tetap berjalan di background.
+
+🔄 Membuka Dashboard Lagi
+
+Jika dashboard diminimize, RVTik tetap berjalan di background.
+
+Untuk membuka kembali:
 
 Buka System Tray Windows
 
@@ -119,17 +173,23 @@ Cari icon RVTik
 
 Double click icon
 
+Dashboard akan muncul kembali.
+
+🛑 Menghentikan Koneksi
+
+Jika live sudah selesai klik:
+
+STOP
+
+Koneksi dengan TikTok Live akan dihentikan.
+
 👨‍💻 Developer
 
-Amik
+Developed by Amik – Ruang Visual
 
-Visual Content Creator & Streaming Tools Developer.
-
-Fokus membuat tools sederhana dan ringan untuk streamer agar dapat meningkatkan kualitas live streaming mereka.
+Content creator visual dan developer tools streaming yang fokus membuat tools ringan dan sederhana untuk streamer.
 
 📱 Social Media
-
-Ikuti update dan konten visual lainnya:
 
 TikTok
 https://www.tiktok.com/@dailylife.emix
@@ -139,14 +199,8 @@ Instagram
 
 ❤️ Support Developer
 
-Jika aplikasi ini membantu streaming kamu, kamu bisa mendukung developer melalui:
+Jika aplikasi ini membantu streaming kamu, kamu bisa mendukung developer:
 
 https://sibagi.com/amikruangvisual
 
-⭐ Support This Project
-
-Jika kamu menyukai project ini, bantu dengan:
-
-⭐ Star repository ini di GitHub
-
-Ini sangat membantu project berkembang lebih jauh.
+⭐ Jika kamu suka project ini, jangan lupa Star repository ini di GitHub.
