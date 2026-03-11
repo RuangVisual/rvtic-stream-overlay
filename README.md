@@ -1,60 +1,58 @@
-# 🎥 RVTik Stream Overlay
+<a id="readme-top"></a>
 
-Overlay Streaming **Real-Time untuk TikTok Live**
+<!-- BADGES -->
 
-RVTik Stream Overlay adalah aplikasi desktop yang membantu streamer TikTok menampilkan berbagai interaksi penonton secara **real-time langsung di layar streaming**.
+[![Stars][stars-shield]][stars-url]
+[![Downloads][downloads-shield]][downloads-url]
+[![License][license-shield]][license-url]
 
-Dengan RVTik, event seperti **chat, gift, viewers, dan join** dapat muncul otomatis sebagai overlay yang dapat digunakan di software streaming seperti **OBS Studio, Streamlabs, atau TikTok Live Studio**.
+<br />
+<div align="center">
+<div align="center">
 
----
+# <img src="dashboard.png">
 
-# Description
+<img src="icon.png" width="120">
 
-RVTik dibuat untuk membantu streamer menghadirkan live streaming yang lebih **interaktif dan profesional** tanpa konfigurasi yang rumit.
 
-Aplikasi ini dirancang dengan fokus pada:
 
-- ⚡ Lightweight performance  
-- 🔴 Real-time live events  
-- 🧩 Simple setup  
-- 🎥 Streaming friendly  
 
-Overlay yang tersedia:
 
-- 💬 Chat Overlay  
-- 👀 Viewer Counter  
-- 🎁 Gift Alerts  
-- 🙋 Join Notification  
-- 🖥 Dock Monitoring Panel  
+</div>
+<h1 align="center">🎥 RVTik Stream Overlay</h1>
 
----
+<p align="center">
+  ### Real-Time TikTok Live Overlay
+Real-Time Overlay System for TikTok Live Streamers
+<br />
+Chat • Gift • Join • Viewers
+<br /><br />
 
-# Getting Started
+<a href="https://ruangvisual.github.io/rvtic-stream-overlay"><strong>Documentation »</strong></a>
+<br /><br />
 
-Panduan ini akan membantu kamu menjalankan RVTik Stream Overlay untuk pertama kali.
+<a href="https://drive.google.com/uc?export=download&id=17ev6LMVbQ749s1k_vDqoSPHSLXCEV5LY">⬇ Download for Windows</a>
 
----
+</p>
 
-# Dependencies
-
-Sebelum menjalankan aplikasi pastikan sistem kamu memenuhi syarat berikut:
-
-- Windows 10 / Windows 11  
-- OBS Studio atau software streaming lain  
-- Internet connection  
-- TikTok account yang sedang live  
+</div>
 
 ---
 
-# Installing
+# 📦 Download
 
-1. Download aplikasi RVTik
+Download versi terbaru RVTik Stream Overlay:
+
+### Windows
+
 
 https://drive.google.com/uc?export=download&id=17ev6LMVbQ749s1k_vDqoSPHSLXCEV5LY
 
-2. Extract file jika dalam bentuk ZIP
 
-3. Jalankan aplikasi
+Setelah download:
+
+1. Extract file jika masih dalam bentuk ZIP  
+2. Jalankan
 
 
 RVTik.exe
@@ -68,55 +66,50 @@ More Info → Run Anyway
 
 ---
 
-# Executing Program
+# 🎥 Tentang RVTik
 
-Ikuti langkah berikut untuk menggunakan RVTik.
+**RVTik Stream Overlay** adalah aplikasi desktop yang membantu streamer TikTok menampilkan interaksi penonton secara **real-time langsung di layar streaming**.
 
-### 1 Jalankan Aplikasi
+Event yang bisa ditampilkan:
 
-Buka **RVTik Stream Overlay** di komputer kamu.
+- 💬 Chat Overlay
+- 👀 Viewer Counter
+- 🎁 Gift Alerts
+- 🙋 Join Notifications
+- 🔗 Share Notification
+- 👨‍🎤 Follow Notification
+- 👁️ Viewer Overlay
+- 📋 LikeBoard
+- 📋 Leaderboard GIFT
+  
 
-### 2 Masukkan Username TikTok
+Overlay dapat digunakan di software streaming seperti:
 
-Masukkan username TikTok Live yang sedang digunakan.
+- OBS Studio
+- Streamlabs
+- TikTok Live Studio
+- Software lain yang mendukung **Browser Source**
 
-Contoh:
+---
 
+# ⚡ Cara Menggunakan
 
-username_tiktok
+1 Jalankan aplikasi RVTik  
 
+2 Masukkan **Username TikTok Live**
 
-### 3 Start Connection
-
-Klik tombol:
+3 Klik tombol
 
 
 START
 
 
-Status akan berubah menjadi:
+4 Copy **Overlay Link**
+
+5 Tambahkan ke OBS
 
 
-Connected
-
-
-Aplikasi akan mulai membaca event live seperti:
-
-- Chat
-- Gift
-- Join
-- Follow
-
-### 4 Tambahkan Overlay ke OBS
-
-Di dashboard buka menu **Overlay Links**.
-
-Copy link overlay yang ingin digunakan.
-
-Di OBS:
-
-
-Sources → Add → Browser Source → Paste Overlay Link
+Sources → Browser Source
 
 
 Ukuran yang direkomendasikan:
@@ -125,24 +118,49 @@ Ukuran yang direkomendasikan:
 1920 x 1080
 
 
----
-
-# Help
-
-Jika overlay tidak muncul:
-
-- Pastikan TikTok sedang **LIVE**
-- Periksa **username TikTok**
-- Restart aplikasi RVTik
-- Pastikan OBS menggunakan **Browser Source**
+Overlay akan muncul otomatis saat live berjalan.
 
 ---
 
-# Authors
+# ☕ Traktir Kopi Developer
 
-**Amik – Ruang Visual**
+Jika aplikasi ini membantu streaming kamu, kamu bisa traktir kopi developer.
 
-Visual Content Creator & Streaming Tools Developer
+👉 https://sibagi.com/amikruangvisual
+
+Support kecil dari kamu sangat membantu pengembangan project ini ❤️
+
+---
+
+# ❤️ Open Donatur / Supporter
+
+Terima kasih kepada semua yang mendukung project ini.
+
+Supporter akan ditampilkan di halaman ini.
+
+### Donatur
+
+- (belum ada)
+
+Jika kamu ingin mendukung project ini:
+
+👉 https://sibagi.com/amikruangvisual
+
+---
+
+# ⭐ Support Project
+
+Jika kamu menyukai project ini, bantu dengan:
+
+⭐ **Star repository ini di GitHub**
+
+Ini sangat membantu project berkembang lebih jauh.
+
+---
+
+# 👨‍💻 Developer
+
+**Amik — Ruang Visual**
 
 TikTok  
 https://www.tiktok.com/@dailylife.emix
@@ -152,42 +170,20 @@ Instagram
 
 ---
 
-# Version History
+# 🔗 Project Page
 
-## 2.0
-
-- Real-time overlay improvements  
-- Dock monitoring panel  
-- Performance optimization  
-
-## 1.0
-
-- Initial release  
+Website  
+https://ruangvisual.github.io/rvtic-stream-overlay
 
 ---
 
-# License
+<!-- MARKDOWN LINKS -->
 
-MIT License
+[stars-shield]: https://img.shields.io/github/stars/ruangvisual/rvtic-stream-overlay?style=for-the-badge
+[stars-url]: https://github.com/ruangvisual/rvtic-stream-overlay/stargazers
 
----
+[downloads-shield]: https://img.shields.io/badge/download-windows-blue?style=for-the-badge
+[downloads-url]: https://drive.google.com/uc?export=download&id=17ev6LMVbQ749s1k_vDqoSPHSLXCEV5LY
 
-# Acknowledgments
-
-Terima kasih kepada:
-
-- Open Source Community  
-- OBS Studio Browser Source system  
-- TikTok Live event monitoring tools
-- Keluarga Streamer Tiktok Indonesia
-
-
----
-
-# ❤️ Support Developer
-
----
-
-Jika aplikasi ini membantu streaming kamu, kamu bisa mendukung developer:
-
-https://sibagi.com/amikruangvisual
+[license-shield]: https://img.shields.io/github/license/ruangvisual/rvtic-stream-overlay?style=for-the-badge
+[license-url]: https://github.com/ruangvisual/rvtic-stream-overlay
