@@ -11,34 +11,34 @@ Dengan RVTik, berbagai aktivitas penonton seperti komentar, gift, join, dan juml
 
 ✨ Fitur Utama
 
-💬 Real-Time Chat Overlay
+💬 Real-Time Chat Overlay:
 Menampilkan komentar penonton secara langsung di layar streaming.
 
-👀 Viewers Counter Overlay
+👀 Viewers Counter Overlay:
 Menampilkan jumlah penonton live secara real-time selama streaming berlangsung.
 
-🎁 Gift & Event Alerts
+🎁 Gift & Event Alerts:
 Menampilkan notifikasi gift dan event live lainnya secara otomatis.
 
-🙋 Join Notification Overlay
+🙋 Join Notification Overlay:
 Menampilkan notifikasi ketika penonton baru bergabung ke live.
 
-🖥️ Dock Monitoring Panel
+🖥️ Dock Monitoring Panel:
 Panel untuk memonitor chat dan event live langsung dari aplikasi.
 
-⚡ Ringan & Stabil
+⚡ Ringan & Stabil:
 Dirancang agar tetap ringan saat digunakan bersama software streaming.
 
-🖥️ Kompatibel dengan
+🖥️ Kompatibel dengan:
 OBS Studio
 Streamlabs
 TikTok Live Studio
 Software streaming lain yang mendukung Browser Source
 
-🚀 Designed for Streamers
+🚀 Designed for Streamers:
 RVTik dibuat untuk membantu streamer TikTok Live menghadirkan siaran yang lebih interaktif dan profesional dengan cara yang sederhana dan efisien.
 
-👨‍💻 Developer
+👨‍💻 Developer:
 RVTik Stream Overlay dikembangkan oleh Amik
 Content creator visual dan pengembang tools streaming yang berfokus pada pembuatan solusi sederhana dan ringan untuk membantu streamer meningkatkan kualitas siaran mereka.
 
