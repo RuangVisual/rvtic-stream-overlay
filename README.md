@@ -64,6 +64,7 @@ Jika Windows Defender muncul warning:
 More Info → Run Anyway
 
 
+
 ---
 
 # 🎥 Tentang RVTik
@@ -89,6 +90,7 @@ Overlay dapat digunakan di software streaming seperti:
 - Streamlabs
 - TikTok Live Studio
 - Software lain yang mendukung **Browser Source**
+- 
 
 ---
 
@@ -120,6 +122,7 @@ Ukuran yang direkomendasikan:
 
 Overlay akan muncul otomatis saat live berjalan.
 
+
 ---
 
 # ☕ Traktir Kopi Developer
@@ -129,6 +132,7 @@ Jika aplikasi ini membantu streaming kamu, kamu bisa traktir kopi developer.
 👉 https://sibagi.com/amikruangvisual
 
 Support kecil dari kamu sangat membantu pengembangan project ini ❤️
+
 
 ---
 
@@ -140,11 +144,10 @@ Supporter akan ditampilkan di halaman ini.
 
 ### Donatur
 
-- (belum ada)
-
 Jika kamu ingin mendukung project ini:
 
 👉 https://sibagi.com/amikruangvisual
+
 
 ---
 
@@ -155,6 +158,7 @@ Jika kamu menyukai project ini, bantu dengan:
 ⭐ **Star repository ini di GitHub**
 
 Ini sangat membantu project berkembang lebih jauh.
+
 
 ---
 
@@ -168,6 +172,7 @@ https://www.tiktok.com/@dailylife.emix
 Instagram  
 @dailylife.emix
 
+
 ---
 
 # 🔗 Project Page
@@ -176,6 +181,87 @@ Website
 https://ruangvisual.github.io/rvtic-stream-overlay
 
 ---
+
+
+## Open Source Libraries
+
+RVTik is built using several open-source libraries that power the application and make development possible.  
+We are grateful to the developers and communities behind these projects.
+
+---
+
+## Core Technologies
+
+### Electron
+
+Framework used to build the RVTik desktop application using web technologies.
+
+- **License:** MIT  
+- **Website:** https://www.electronjs.org/
+
+---
+
+### Electron Builder
+
+Used to package and distribute RVTik as a desktop installer.
+
+- **License:** MIT  
+- **Website:** https://www.electron.build/
+
+---
+
+## Streaming Integration
+
+### TikTok Live Connector
+
+Library used to receive TikTok Live events such as:
+
+- Likes  
+- Gifts  
+- Comments  
+- Followers  
+
+- **Repository:**  
+  https://github.com/zerodytrash/TikTok-Live-Connector
+
+- **License:** MIT
+
+---
+
+## Networking
+
+### WS WebSocket Library
+
+Used for real-time communication between:
+
+- RVTik Connector  
+- RVTik Dashboard  
+- RVTik Overlay  
+
+- **Repository:**  
+  https://github.com/websockets/ws
+
+- **License:** MIT
+
+---
+
+## Optional Integration
+
+### OBS WebSocket JS
+
+Allows RVTik to communicate with OBS Studio for advanced stream automation.
+
+- **Repository:**  
+  https://github.com/obs-websocket-community-projects/obs-websocket-js
+
+- **License:** MIT
+
+---
+
+## Acknowledgment
+
+RVTik would not be possible without the open-source community.  
+We sincerely thank all developers who maintain and contribute to these amazing projects.
 
 <!-- MARKDOWN LINKS -->
 
