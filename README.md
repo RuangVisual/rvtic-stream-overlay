@@ -3,6 +3,7 @@
 Overlay Streaming Real-Time untuk TikTok Live
 
 Download:
+Windows:
 https://drive.google.com/uc?export=download&id=17ev6LMVbQ749s1k_vDqoSPHSLXCEV5LY
 
 RVTik Stream Overlay adalah aplikasi desktop yang membantu streamer TikTok Live menampilkan interaksi penonton secara real-time langsung di layar streaming. Aplikasi ini dirancang ringan dan mudah digunakan sehingga streamer dapat menampilkan berbagai event live tanpa konfigurasi yang rumit.
@@ -42,4 +43,4 @@ RVTik Stream Overlay dikembangkan oleh Amik
 Content creator visual dan pengembang tools streaming yang berfokus pada pembuatan solusi sederhana dan ringan untuk membantu streamer meningkatkan kualitas siaran mereka.
 
 Ikuti update dan konten visual lainnya melalui:
-TikTok & Instagram: @dailylife.emix
+TikTok & Instagram: @dailylife.emix https://www.tiktok.com/@dailylife.emix
