@@ -19,7 +19,7 @@
 
 
 </div>
-<h1 align="center">🎥 RVTik Stream Overlay</h1>
+<h1 align="center">🎥 RVTik Stream Overlay V3 NEW</h1>
 
 <p align="center">
   ### Real-Time TikTok Live Overlay
@@ -31,7 +31,7 @@ Chat • Gift • Join • Viewers
 <a href="https://ruangvisual.github.io/rvtic-stream-overlay"><strong>Documentation »</strong></a>
 <br /><br />
 
-<a href="https://drive.google.com/file/d/13On6DbqGfpdhyUJrJoIJoe1kUva_SzKX/view?usp=sharing">⬇ Download for Windows</a>
+<a href="https://drive.google.com/file/d/15cWB8U6J7x1PcNcAdz7ZAJgPgbQSoyJ-/view?usp=sharing">⬇ Download for Windows</a>
 
 </p>
 
@@ -244,6 +244,24 @@ Used for real-time communication between:
 - **License:** MIT
 
 ---
+
+---
+
+### Social Stream Ninja
+
+RVTik development was partially inspired by concepts used in **Social Stream Ninja**, an open-source project that enables real-time chat capture and browser overlay systems for live streaming.
+
+Social Stream Ninja has helped shape the ecosystem of browser-based streaming overlays used by creators worldwide.
+
+We thank the project and its contributors for their work in advancing open-source streaming tools.
+
+- **Repository:**  
+https://github.com/steveseguin/social_stream
+
+- **Website:**  
+https://socialstream.ninja
+
+- **License:** MIT
 
 ## Optional Integration
 
