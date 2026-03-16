@@ -31,7 +31,7 @@ Chat • Gift • Join • Viewers
 <a href="https://ruangvisual.github.io/rvtic-stream-overlay"><strong>Documentation »</strong></a>
 <br /><br />
 
-<a href="https://drive.google.com/file/d/15cWB8U6J7x1PcNcAdz7ZAJgPgbQSoyJ-/view?usp=sharing">⬇ Download for Windows</a>
+<a href="https://drive.google.com/file/d/1wQkOYxkLCFSVsVahtREMOCNVxl9qy_vt/view?usp=sharing">⬇ Download for Windows</a>
 
 </p>
 
