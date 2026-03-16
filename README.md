@@ -245,7 +245,7 @@ Used for real-time communication between:
 
 ---
 
----
+## DOM INJECT
 
 ### Social Stream Ninja
 
