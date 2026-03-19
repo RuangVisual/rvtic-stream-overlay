@@ -19,7 +19,7 @@
 
 
 </div>
-<h1 align="center">🎥 RVTik Stream Overlay V3 NEW</h1>
+<h1 align="center">🎥 RVTik S T R E A M V3 NEW</h1>
 
 <p align="center">
   ### Real-Time TikTok Live Overlay
