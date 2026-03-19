@@ -268,16 +268,37 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 12px 30px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 14px 34px;
+
+            background: linear-gradient(90deg, var(--tk-cyan), var(--tk-pink));
+            border: none;
             border-radius: 100px;
-            color: var(--text-muted);
+
+            color: #fff;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 15px;
+            font-weight: 600;
+            font-size: 20px;
+
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.3);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tutorial-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 100px;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+            opacity: 0.6;
+            animation: pulseGlow 2s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0% { opacity: 0.4; transform: scale(1); }
+            100% { opacity: 0; transform: scale(1.4); }
         }
 
         .tutorial-btn:hover {
@@ -697,7 +718,7 @@
             <div class="tutorial-btn-wrapper reveal delay-5">
                 <a href="#tutorial-section" class="tutorial-btn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
-                    Lihat Panduan & Tutorial
+                    TUTORIAL PASANG!! 👁️
                 </a>
             </div>
         </section>
@@ -866,6 +887,72 @@
                     <p>Jika live sudah selesai klik tombol:</p>
                     <span class="code">STOP</span>
                     <p>Koneksi dengan TikTok Live akan dihentikan.</p>
+                </div>
+            </div>
+
+            <div class="accordion glass">
+            <div class="accordion-header">4. Menambahkan Overlay ke OBS</div>
+            <div class="accordion-content">
+                <p>Buka menu <b>Overlay Links</b> di dashboard RVTik.</p>
+                <p>Copy link overlay yang ingin digunakan (Chat / Gift / All-in-One).</p>
+
+                <p style="margin-top:10px;"><b>Langkah di OBS:</b></p>
+                <ul>
+                    <li>Buka OBS Studio</li>
+                    <li>Pada bagian <b>Sources</b> klik tombol <b>+</b></li>
+                    <li>Pilih <b>Browser Source</b></li>
+                    <li>Beri nama (contoh: <span class="code">RVTik Overlay</span>)</li>
+                    <li>Klik <b>OK</b></li>
+                </ul>
+
+                <p style="margin-top:10px;"><b>Masukkan Link:</b></p>
+                <ul>
+                    <li>Paste link overlay ke kolom <b>URL</b></li>
+                    <li>Atur ukuran:</li>
+                </ul>
+
+                <span class="code">Width: 1920 | Height: 1080</span>
+
+                <p style="margin-top:10px;">Klik <b>OK</b>, overlay akan langsung muncul di layar OBS.</p>
+
+                <div class="tip">
+                    Tips: Pastikan RVTik sudah dalam status <b>Connected</b> agar overlay menampilkan data realtime.
+                </div>
+            </div>
+        </div>
+        <div class="accordion glass">
+                <div class="accordion-header">5. Menambahkan Overlay ke TikTok Live Studio</div>
+                <div class="accordion-content">
+                    <p>Selain OBS, kamu juga bisa menggunakan RVTik di TikTok Live Studio.</p>
+
+                    <p><b>Langkah-langkah:</b></p>
+                    <ul>
+                        <li>Buka aplikasi <b>TikTok Live Studio</b></li>
+                        <li>Masuk ke scene live kamu</li>
+                        <li>Klik tombol <b>Add Source (+)</b></li>
+                        <li>Pilih <b>Browser</b> atau <b>Web Page</b></li>
+                    </ul>
+
+                    <p style="margin-top:10px;"><b>Masukkan Overlay:</b></p>
+                    <ul>
+                        <li>Paste link overlay dari dashboard RVTik</li>
+                        <li>Atur ukuran sesuai layar:</li>
+                    </ul>
+
+                    <span class="code">1920 x 1080</span>
+
+                    <p style="margin-top:10px;">Klik <b>Confirm / Add</b>, overlay akan langsung tampil di live.</p>
+
+                    <p style="margin-top:10px;"><b>Jika overlay tidak muncul:</b></p>
+                    <ul>
+                        <li>Pastikan status RVTik sudah <span class="code">Connected</span></li>
+                        <li>Coba refresh source</li>
+                        <li>Pastikan link overlay benar</li>
+                    </ul>
+
+                    <div class="tip">
+                        Tips: TikTok Live Studio kadang butuh refresh manual agar overlay update realtime.
+                    </div>
                 </div>
             </div>
         </section>
