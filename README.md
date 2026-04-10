@@ -19,11 +19,7 @@
 
 
 </div>
-<<<<<<< HEAD
-<h1 align="center">🎥 RVTik S T R E A M V3</h1>
-=======
-<h1 align="center">🎥 RVTik S T R E A M V3 NEW</h1>
->>>>>>> eac760e78498d5f6bbee0e645cce802ad726e061
+<h1 align="center">🎥 RVTik S T R E A M V 4 NEW</h1>
 
 <p align="center">
   ### Real-Time TikTok Live Overlay
@@ -35,7 +31,7 @@ Chat • Gift • Join • Viewers
 <a href="https://ruangvisual.github.io/rvtic-stream-overlay"><strong>Documentation »</strong></a>
 <br /><br />
 
-<a href="https://drive.google.com/drive/folders/1mbZqW3EvHVEx9q7HyCBfhdZc4_ZTX3Dt?usp=sharing">⬇ Download for Windows</a>
+<a href="https://ruangvisual.github.io/rvtic-stream-overlay/RVTik-Stream-Overlay-Setup-4.0.0.zip">⬇ Download for Windows</a>
 
 </p>
 
@@ -46,12 +42,6 @@ Chat • Gift • Join • Viewers
 # 📦 Download
 
 Download versi terbaru RVTik Stream Overlay:
-
-### Windows
-
-
-https://drive.google.com/uc?export=download&id=17ev6LMVbQ749s1k_vDqoSPHSLXCEV5LY
-
 
 Setelah download:
 
