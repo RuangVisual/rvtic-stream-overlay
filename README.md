@@ -33,6 +33,9 @@ Chat • Gift • Join • Viewers
 
 <a href="https://ruangvisual.github.io/rvtic-stream-overlay/RVTik-Stream-Overlay-Setup-5.0.0.zip">⬇ Download for Windows</a>
 
+<a href="https://drive.google.com/drive/folders/1LAtYAOVGjoetiJ4G9dwsNgxRXu2Vh9LO?usp=sharing"> ⬇ Download for Mac Os</a>
+
+
 </p>
 
 </div>
