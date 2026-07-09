@@ -1,485 +1,308 @@
-
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy - RVTik StreamCam</title>
-  <meta name="description" content="Privacy Policy untuk aplikasi RVTik StreamCam." />
-  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Privacy Policy for RVTik StreamCam Android application." />
+
   <style>
     :root {
-      --bg: #070914;
-      --card: rgba(255,255,255,.08);
-      --card-2: rgba(255,255,255,.12);
-      --text: #f7f8ff;
-      --muted: #b9c0d4;
-      --line: rgba(255,255,255,.16);
-      --accent: #7c5cff;
-      --accent-2: #00d4ff;
-      --danger: #ff6b6b;
-      --ok: #55e6a5;
-      --shadow: 0 24px 80px rgba(0,0,0,.35);
-      --radius: 24px;
-      --max: 980px;
+      --bg: #f4f6fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #111827;
+      --accent-soft: #f3f4f6;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
       color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(124,92,255,.35), transparent 35%),
-        radial-gradient(circle at 85% 20%, rgba(0,212,255,.22), transparent 30%),
-        linear-gradient(180deg, #070914 0%, #0b1024 50%, #060812 100%);
       line-height: 1.7;
     }
 
-    a { color: #9fdcff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
     .page {
-      width: min(100% - 32px, var(--max));
+      max-width: 960px;
       margin: 0 auto;
-      padding: 44px 0 72px;
+      padding: 40px 18px;
     }
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: linear-gradient(135deg, rgba(255,255,255,.13), rgba(255,255,255,.05));
-      box-shadow: var(--shadow);
-      padding: clamp(28px, 5vw, 56px);
-      margin-bottom: 24px;
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 34px;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
     }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: -80px -120px auto auto;
-      width: 260px;
-      height: 260px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(0,212,255,.28), transparent 68%);
-      pointer-events: none;
-    }
-
-    .badge {
+    .brand {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 7px 12px;
-      border: 1px solid var(--line);
+      gap: 10px;
+      padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,.08);
-      color: var(--muted);
-      font-size: 13px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 14px;
       margin-bottom: 18px;
     }
 
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--ok);
-      box-shadow: 0 0 18px rgba(85,230,165,.8);
-    }
-
-    h1, h2, h3 { line-height: 1.2; margin: 0 0 14px; }
     h1 {
-      font-size: clamp(34px, 6vw, 60px);
-      letter-spacing: -0.05em;
-      max-width: 780px;
-    }
-    h2 {
-      font-size: clamp(23px, 3vw, 32px);
-      letter-spacing: -0.025em;
-      padding-top: 6px;
-    }
-    h3 { font-size: 19px; }
-
-    p { margin: 0 0 14px; color: var(--muted); }
-    strong { color: var(--text); }
-
-    .lead {
-      max-width: 760px;
-      font-size: 18px;
-      color: #dfe4f5;
+      font-size: 34px;
+      line-height: 1.2;
+      margin: 0 0 8px;
+      color: #111827;
     }
 
-    .meta {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .meta-item,
-    .section,
-    .toc,
-    .notice {
-      border: 1px solid var(--line);
-      background: var(--card);
-      backdrop-filter: blur(18px);
-      border-radius: 18px;
-    }
-
-    .meta-item { padding: 14px; }
-    .meta-label { display: block; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
-    .meta-value { display: block; color: var(--text); font-weight: 700; margin-top: 4px; }
-
-    .toc {
-      padding: 20px;
-      margin: 24px 0;
-    }
-
-    .toc-title { margin-bottom: 10px; color: var(--text); font-weight: 800; }
-    .toc-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px 18px;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-    .toc-grid a { color: var(--muted); }
-
-    .section {
-      padding: clamp(22px, 4vw, 34px);
-      margin: 18px 0;
-    }
-
-    .table-wrap {
-      overflow-x: auto;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      margin: 16px 0 8px;
-    }
-
-    table {
-      width: 100%;
-      min-width: 720px;
-      border-collapse: collapse;
-      background: rgba(0,0,0,.14);
-    }
-
-    th, td {
-      vertical-align: top;
-      text-align: left;
-      padding: 14px;
-      border-bottom: 1px solid var(--line);
+    .subtitle {
+      margin: 0 0 28px;
       color: var(--muted);
+      font-size: 15px;
     }
 
-    th {
-      color: var(--text);
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: .07em;
-      background: rgba(255,255,255,.07);
+    h2 {
+      font-size: 21px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #111827;
+      border-top: 1px solid var(--border);
+      padding-top: 22px;
     }
 
-    tr:last-child td { border-bottom: none; }
-    ul { margin: 10px 0 0; padding-left: 22px; color: var(--muted); }
-    li { margin: 7px 0; }
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin-top: 8px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
 
     .notice {
-      padding: 18px 20px;
-      border-color: rgba(255,255,255,.22);
-      background: linear-gradient(135deg, rgba(124,92,255,.18), rgba(0,212,255,.08));
-      margin: 18px 0;
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin: 22px 0;
     }
 
-    .warning {
-      border-color: rgba(255,107,107,.35);
-      background: linear-gradient(135deg, rgba(255,107,107,.14), rgba(255,255,255,.06));
-    }
-
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 0;
-      list-style: none;
-    }
-    .pill-list li {
-      margin: 0;
-      padding: 8px 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255,255,255,.07);
-      color: #dfe4f5;
-      font-size: 14px;
+    .contact {
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 10px;
     }
 
     footer {
-      margin-top: 26px;
+      margin-top: 34px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
       color: var(--muted);
       font-size: 14px;
-      text-align: center;
     }
 
-    .replace {
-      color: #fff;
-      background: rgba(255,107,107,.18);
-      border: 1px dashed rgba(255,107,107,.65);
-      padding: 1px 6px;
-      border-radius: 8px;
-      white-space: nowrap;
+    a {
+      color: #2563eb;
+      text-decoration: none;
     }
 
-    @media (max-width: 720px) {
-      .meta { grid-template-columns: 1fr; }
-      .toc-grid { grid-template-columns: 1fr; }
-      .page { width: min(100% - 22px, var(--max)); padding-top: 18px; }
-      .hero { border-radius: 20px; }
-      h1 { letter-spacing: -0.035em; }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 20px 12px;
+      }
+
+      .card {
+        padding: 24px 18px;
+        border-radius: 14px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 19px;
+      }
     }
   </style>
 </head>
+
 <body>
   <main class="page">
-    <section class="hero">
-      <div class="badge"><span class="dot"></span> Privacy Policy</div>
-      <h1>Kebijakan Privasi RVTik StreamCam</h1>
-      <p class="lead">
-        RVTik StreamCam adalah aplikasi kamera dan live encoder Android yang membantu pengguna mengambil input kamera internal atau USB/UVC, menampilkan preview, menerapkan pengaturan visual, dan mengirim siaran ke server RTMP/RTMPS pilihan pengguna.
+    <article class="card">
+      <div class="brand">RVTik StreamCam</div>
+
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">
+        Last updated: July 2026
       </p>
-      <div class="meta" aria-label="Informasi kebijakan">
-        <div class="meta-item">
-          <span class="meta-label">Aplikasi</span>
-          <span class="meta-value">RVTik StreamCam</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">Package</span>
-          <span class="meta-value">com.rvtik.uvcrtmp</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">Terakhir diperbarui</span>
-          <span class="meta-value">9 Juli 2026</span>
-        </div>
-      </div>
-    </section>
 
-    <nav class="toc" aria-label="Daftar isi">
-      <div class="toc-title">Daftar Isi</div>
-      <ul class="toc-grid">
-        <li><a href="#ringkasan">1. Ringkasan</a></li>
-        <li><a href="#data">2. Data yang Diproses</a></li>
-        <li><a href="#izin">3. Izin Aplikasi</a></li>
-        <li><a href="#penggunaan">4. Cara Data Digunakan</a></li>
-        <li><a href="#berbagi">5. Berbagi Data</a></li>
-        <li><a href="#penyimpanan">6. Penyimpanan & Keamanan</a></li>
-        <li><a href="#anak">7. Privasi Anak</a></li>
-        <li><a href="#hak">8. Hak Pengguna</a></li>
-        <li><a href="#perubahan">9. Perubahan Kebijakan</a></li>
-        <li><a href="#kontak">10. Kontak</a></li>
-      </ul>
-    </nav>
-
-    <section id="ringkasan" class="section">
-      <h2>1. Ringkasan</h2>
       <p>
-        Kebijakan Privasi ini menjelaskan bagaimana RVTik StreamCam menangani data saat pengguna memakai aplikasi. Aplikasi ini berfungsi sebagai alat produksi live streaming. Pengguna mengontrol sendiri kamera, mikrofon, sumber USB/UVC, file LUT/overlay, serta tujuan streaming yang digunakan.
+        This Privacy Policy explains how <strong>RVTik StreamCam</strong> handles data,
+        device permissions, and user configuration when you use our Android application.
       </p>
+
       <div class="notice">
-        <p><strong>Inti kebijakan:</strong> RVTik StreamCam tidak menjual data pribadi pengguna. Data kamera, mikrofon, dan konten siaran hanya diproses untuk menjalankan preview, encoding, dan pengiriman live stream ke server yang dipilih oleh pengguna.</p>
+        <strong>Summary:</strong> RVTik StreamCam does not sell user data.
+        The app processes camera input, microphone audio, USB/UVC devices, overlays,
+        LUT files, and streaming configuration only to provide camera preview and live
+        streaming features. Video and audio data are sent only to the RTMP/RTMPS
+        destination configured by the user.
       </div>
-    </section>
 
-    <section id="data" class="section">
-      <h2>2. Data yang Diproses oleh Aplikasi</h2>
+      <h2>1. About RVTik StreamCam</h2>
       <p>
-        Bergantung pada fitur yang digunakan, aplikasi dapat mengakses atau memproses jenis data berikut:
+        RVTik StreamCam is an Android application designed for camera monitoring and
+        live streaming. The app may be used with the internal Android camera, USB/UVC
+        cameras, HDMI capture devices, microphones, overlays, LUT color filters, and
+        streaming servers that support RTMP or RTMPS.
       </p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Jenis Data</th>
-              <th>Contoh</th>
-              <th>Tujuan</th>
-              <th>Penyimpanan</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Data kamera/video</strong></td>
-              <td>Preview kamera internal, input USB/UVC, capture card HDMI melalui UVC</td>
-              <td>Menampilkan preview, menerapkan efek visual/LUT/overlay, dan melakukan encoding video</td>
-              <td>Diproses di perangkat. Dikirim keluar hanya saat pengguna memulai live stream ke server tujuan.</td>
-            </tr>
-            <tr>
-              <td><strong>Data audio/mikrofon</strong></td>
-              <td>Audio dari mikrofon perangkat atau sumber audio yang dipilih pengguna</td>
-              <td>Merekam/encoding audio untuk live stream atau monitoring sesuai fitur yang aktif</td>
-              <td>Diproses di perangkat. Dikirim keluar hanya saat pengguna memulai live stream dengan audio.</td>
-            </tr>
-            <tr>
-              <td><strong>Data konfigurasi streaming</strong></td>
-              <td>URL server RTMP/RTMPS, stream key, bitrate, resolusi, FPS, orientasi, pengaturan encoder</td>
-              <td>Menyimpan preferensi agar pengguna tidak perlu mengatur ulang setiap kali membuka aplikasi</td>
-              <td>Disimpan secara lokal di perangkat pengguna.</td>
-            </tr>
-            <tr>
-              <td><strong>File yang dipilih pengguna</strong></td>
-              <td>File LUT, gambar overlay PNG, GIF, atau aset visual lain</td>
-              <td>Menampilkan/menerapkan aset visual pada preview atau output stream</td>
-              <td>Diproses berdasarkan izin file yang diberikan pengguna. Aplikasi tidak mengunggah file tersebut ke server RVTik.</td>
-            </tr>
-            <tr>
-              <td><strong>Data teknis perangkat</strong></td>
-              <td>Resolusi kamera yang tersedia, format UVC, status koneksi USB, status encoder, error teknis aplikasi</td>
-              <td>Menjalankan kompatibilitas kamera, diagnosis error, dan stabilitas streaming</td>
-              <td>Umumnya diproses di perangkat. Jika log dikirim manual oleh pengguna untuk support, data digunakan hanya untuk membantu perbaikan masalah.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p>
-        Aplikasi tidak meminta pengguna membuat akun RVTik StreamCam untuk fungsi utama kamera dan live encoder, kecuali fitur akun atau lisensi ditambahkan pada versi mendatang. Jika fitur baru ditambahkan, kebijakan ini akan diperbarui.
-      </p>
-    </section>
 
-    <section id="izin" class="section">
-      <h2>3. Izin Aplikasi</h2>
+      <h2>2. Data Processed by the App</h2>
       <p>
-        RVTik StreamCam dapat meminta izin tertentu agar fitur inti dapat berjalan dengan benar:
+        RVTik StreamCam may process the following types of data to provide its features:
       </p>
-      <ul class="pill-list">
-        <li>Kamera</li>
-        <li>Mikrofon</li>
-        <li>USB/UVC Device Access</li>
-        <li>Internet</li>
-        <li>Storage / Media Picker</li>
-        <li>Foreground Service / Notification</li>
-      </ul>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Izin</th>
-              <th>Alasan Penggunaan</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Kamera</strong></td>
-              <td>Untuk mengambil gambar dari kamera internal perangkat atau sumber kamera yang didukung.</td>
-            </tr>
-            <tr>
-              <td><strong>Mikrofon</strong></td>
-              <td>Untuk mengambil audio saat pengguna mengaktifkan streaming atau fitur audio.</td>
-            </tr>
-            <tr>
-              <td><strong>Akses USB/UVC</strong></td>
-              <td>Untuk membaca input dari kamera USB, capture card, atau perangkat UVC lain yang dipilih pengguna.</td>
-            </tr>
-            <tr>
-              <td><strong>Internet</strong></td>
-              <td>Untuk mengirim live stream ke server RTMP/RTMPS yang dimasukkan atau dipilih oleh pengguna.</td>
-            </tr>
-            <tr>
-              <td><strong>Storage / Media Picker</strong></td>
-              <td>Untuk memilih file LUT, gambar overlay, GIF, atau aset visual lain dari perangkat pengguna.</td>
-            </tr>
-            <tr>
-              <td><strong>Foreground Service / Notification</strong></td>
-              <td>Untuk menjaga proses streaming tetap berjalan dan menampilkan status saat aplikasi sedang melakukan tugas penting di latar depan.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p>
-        Pengguna dapat menolak atau mencabut izin melalui pengaturan Android. Beberapa fitur mungkin tidak dapat digunakan jika izin yang dibutuhkan tidak diberikan.
-      </p>
-    </section>
-
-    <section id="penggunaan" class="section">
-      <h2>4. Cara Data Digunakan</h2>
-      <p>Data digunakan untuk tujuan berikut:</p>
       <ul>
-        <li>Menampilkan preview kamera secara real-time.</li>
-        <li>Menghubungkan kamera internal atau perangkat USB/UVC.</li>
-        <li>Menerapkan pengaturan visual, seperti LUT, overlay, scaling, resolusi, dan FPS.</li>
-        <li>Melakukan encoding video dan audio.</li>
-        <li>Mengirim output live stream ke server RTMP/RTMPS yang dipilih pengguna.</li>
-        <li>Menyimpan preferensi lokal, seperti pengaturan bitrate, resolusi, server, dan stream key.</li>
-        <li>Membantu diagnosis masalah teknis jika pengguna secara sukarela mengirim log atau informasi error kepada tim support.</li>
+        <li>Camera input from the internal Android camera.</li>
+        <li>Camera input from USB/UVC cameras or HDMI capture devices.</li>
+        <li>Microphone audio when audio streaming is enabled by the user.</li>
+        <li>RTMP or RTMPS server URL and stream key entered by the user.</li>
+        <li>App settings such as resolution, FPS, bitrate, orientation, LUT, and overlay configuration.</li>
+        <li>Local files selected by the user, such as PNG overlays, GIF overlays, or LUT files.</li>
       </ul>
-    </section>
 
-    <section id="berbagi" class="section">
-      <h2>5. Berbagi Data dengan Pihak Ketiga</h2>
+      <h2>3. How the Data Is Used</h2>
       <p>
-        RVTik StreamCam tidak menjual data pribadi pengguna kepada pihak ketiga. Namun, saat pengguna memulai live stream, konten video/audio dan informasi koneksi akan dikirim ke platform atau server streaming yang dipilih sendiri oleh pengguna, misalnya server RTMP/RTMPS milik platform live streaming.
+        The data is used only to provide app functionality, including:
       </p>
-      <p>
-        Penggunaan platform pihak ketiga seperti YouTube, TikTok, Facebook, atau layanan RTMP/RTMPS lain tunduk pada kebijakan privasi dan ketentuan masing-masing platform tersebut. RVTik StreamCam tidak mengontrol bagaimana platform pihak ketiga memproses data setelah stream diterima oleh platform tersebut.
-      </p>
-    </section>
-
-    <section id="penyimpanan" class="section">
-      <h2>6. Penyimpanan, Keamanan, dan Retensi Data</h2>
-      <p>
-        Pengaturan aplikasi seperti URL server, stream key, bitrate, resolusi, FPS, dan preferensi visual dapat disimpan secara lokal di perangkat agar pengalaman penggunaan lebih mudah. Pengguna dapat menghapus data aplikasi melalui pengaturan Android atau menghapus aplikasi dari perangkat.
-      </p>
-      <p>
-        Kami berupaya menggunakan praktik keamanan yang wajar untuk melindungi data yang diproses aplikasi. Namun, tidak ada metode transmisi internet atau penyimpanan elektronik yang sepenuhnya bebas risiko. Pengguna disarankan untuk menjaga kerahasiaan stream key dan tidak membagikannya kepada pihak yang tidak dipercaya.
-      </p>
-      <div class="notice warning">
-        <p><strong>Penting:</strong> Stream key adalah data sensitif. Siapa pun yang memiliki stream key dapat mencoba mengirim siaran ke channel/platform terkait. Simpan stream key dengan aman.</p>
-      </div>
-    </section>
-
-    <section id="anak" class="section">
-      <h2>7. Privasi Anak</h2>
-      <p>
-        RVTik StreamCam tidak ditujukan secara khusus untuk anak-anak. Kami tidak dengan sengaja mengumpulkan data pribadi dari anak-anak. Jika orang tua atau wali percaya bahwa anak telah memberikan data pribadi melalui aplikasi ini, silakan hubungi kami agar dapat ditinjau dan ditangani sesuai kebutuhan.
-      </p>
-    </section>
-
-    <section id="hak" class="section">
-      <h2>8. Hak dan Kontrol Pengguna</h2>
-      <p>Pengguna memiliki kontrol atas data dan izin aplikasi, termasuk:</p>
       <ul>
-        <li>Mengaktifkan atau menonaktifkan izin kamera, mikrofon, storage, dan izin terkait lainnya melalui pengaturan Android.</li>
-        <li>Menghapus pengaturan lokal aplikasi melalui menu aplikasi jika tersedia, atau melalui pengaturan Android.</li>
-        <li>Menghapus aplikasi dari perangkat untuk menghapus data lokal yang terkait dengan aplikasi.</li>
-        <li>Menghubungi kami untuk pertanyaan terkait privasi atau permintaan bantuan.</li>
+        <li>Displaying camera preview inside the app.</li>
+        <li>Accessing the selected USB/UVC camera or capture device.</li>
+        <li>Capturing microphone audio when the user enables audio streaming.</li>
+        <li>Processing video, LUT color filters, and overlays before encoding.</li>
+        <li>Sending video and audio streams to the RTMP/RTMPS server configured by the user.</li>
+        <li>Saving local preferences so the app can restore previous settings.</li>
       </ul>
-    </section>
 
-    <section id="perubahan" class="section">
-      <h2>9. Perubahan Kebijakan Privasi</h2>
+      <h2>4. Camera Permission</h2>
       <p>
-        Kebijakan Privasi ini dapat diperbarui dari waktu ke waktu, terutama jika ada perubahan fitur, izin aplikasi, integrasi pihak ketiga, sistem akun, analytics, crash reporting, pembayaran, atau layanan cloud. Tanggal pembaruan terbaru akan ditampilkan di bagian atas halaman ini.
+        The app requires camera permission to display camera preview and capture video input.
+        This permission is used only when the camera feature is active.
       </p>
-    </section>
 
-    <section id="kontak" class="section">
-      <h2>10. Kontak</h2>
+      <h2>5. Microphone Permission</h2>
       <p>
-        Untuk pertanyaan terkait Kebijakan Privasi ini, pengguna dapat menghubungi pengembang aplikasi:
+        The app may request microphone permission to capture audio for live streaming.
+        If audio streaming is not enabled, the app does not use the microphone for streaming.
       </p>
-      <p>
-        <strong>Developer / Entity:</strong> RVTik Stream<br />
-        <strong>App:</strong> RVTik StreamCam<br />
-        <strong>Email:</strong> <span class="replace">dailylife.ami@gmail.com</span><br />
-        <strong>Website:</strong> <span class="replace">https://rvtikstream.com</span>
-      </p>
-      <p>
-        Pastikan email dan website di atas sama atau konsisten dengan informasi developer yang ditampilkan di Google Play Console.
-      </p>
-    </section>
 
-    <footer>
-      © 2026 RVTik StreamCam. All rights reserved.
-    </footer>
+      <h2>6. USB/UVC Device Access</h2>
+      <p>
+        When the user connects a USB/UVC camera or HDMI capture device, Android may ask
+        for USB access permission. This permission is used only to receive video input
+        from the USB device selected by the user.
+      </p>
+
+      <h2>7. Stream Key and Streaming Server</h2>
+      <p>
+        A stream key is sensitive information. RVTik StreamCam uses the stream key only
+        to connect to the streaming server configured by the user, such as YouTube,
+        TikTok Live, or another platform that supports RTMP/RTMPS streaming.
+      </p>
+      <p>
+        Users are responsible for keeping their stream key private and not sharing it
+        publicly or with unauthorized parties.
+      </p>
+
+      <h2>8. Data Sent to Third-Party Platforms</h2>
+      <p>
+        When the user starts live streaming, video and audio data are sent directly to
+        the RTMP/RTMPS destination configured by the user. The destination platform may
+        have its own privacy policy and terms of service.
+      </p>
+      <p>
+        RVTik StreamCam does not control how third-party platforms process streaming data
+        after the stream is received by those platforms.
+      </p>
+
+      <h2>9. Local Storage</h2>
+      <p>
+        The app may store configuration data locally on the user's device, such as
+        resolution, bitrate, FPS, server URL, stream key, selected camera, LUT selection,
+        and overlay settings. This local storage is used to improve usability and restore
+        the user's previous configuration.
+      </p>
+
+      <h2>10. Data Sharing and Selling</h2>
+      <p>
+        RVTik StreamCam does not sell, rent, or trade user personal data.
+        Streaming data is sent only to the destination configured directly by the user.
+      </p>
+
+      <h2>11. Security</h2>
+      <p>
+        We take reasonable steps to protect app functionality and user configuration.
+        However, users are responsible for keeping their stream keys, streaming accounts,
+        server URLs, and devices secure.
+      </p>
+
+      <h2>12. Data Deletion</h2>
+      <p>
+        Locally stored app settings can be removed by clearing the app data through
+        Android settings or by uninstalling the app. For data that has already been sent
+        to third-party streaming platforms, users should refer to the data deletion
+        policies and tools provided by those platforms.
+      </p>
+
+      <h2>13. Children’s Privacy</h2>
+      <p>
+        RVTik StreamCam is not intended to knowingly collect personal information from
+        children. If you believe that a child has provided personal information through
+        the app, please contact us.
+      </p>
+
+      <h2>14. Changes to This Privacy Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Any changes will be posted
+        on this page with an updated revision date.
+      </p>
+
+      <h2>15. Contact Us</h2>
+      <p>
+        If you have any questions about this Privacy Policy, please contact us:
+      </p>
+
+      <div class="contact">
+        <p>
+          <strong>Developer / Entity:</strong> RVTik Stream<br />
+          <strong>App:</strong> RVTik StreamCam<br />
+          <strong>Email:</strong> dailylife.ami@gmail.com<br />
+          <strong>Website:</strong> https://rvtikstream.com
+        </p>
+      </div>
+
+      <footer>
+        &copy; 2026 RVTik StreamCam. All rights reserved.
+      </footer>
+    </article>
   </main>
 </body>
 </html>
